@@ -1,5 +1,5 @@
-import { LocalDate } from "js-joda";
+import { LocalDateTime } from "js-joda";
 
 export class Invitation {
-	private when: LocalDate;
+	private when: LocalDateTime;
 }

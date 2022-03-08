@@ -1,21 +1,21 @@
 import { Movie } from "./Movie";
 import { Money } from "./Money";
 import { Customer } from "./Customer";
-import { LocalDate } from "js-joda";
+import { LocalDateTime, LocalTime } from "js-joda";
 import { Reservation } from "./Reservation";
 
 export class Screening {
 	private movie: Movie;
 	private sequence: number;
-	private whenScreened: LocalDate;
+	private whenScreened: LocalDateTime;
 
-	constructor(movie: Movie, sequence: number, whenScreened: LocalDate) {
+	constructor(movie: Movie, sequence: number, whenScreened: LocalDateTime) {
 		this.movie = movie;
 		this.sequence = sequence;
 		this.whenScreened = whenScreened;
 	}
 
-	public getStartTime(): LocalDate {
+	public getStartTime(): LocalDateTime {
 		return this.whenScreened;
 	}
 
