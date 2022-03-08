@@ -26,9 +26,6 @@ export class Movie {
 	}
 
 	public calculateMovieFee(screening: Screening): Money {
-		if (this.discountPolicy === null) {
-			return this.fee;
-		}
 		return this.fee.minus(
 			this.discountPolicy.calculateDiscountAmount(screening)
 		);
