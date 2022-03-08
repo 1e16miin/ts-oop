@@ -1,11 +1,9 @@
-import { DiscountPolicy } from "./DiscountPolicy";
 import { Money } from "./Money";
 import { Screening } from "./Screening";
-export class NoneDiscountPolicy extends DiscountPolicy {
-	constructor() {
-		super([]);
-	}
-	protected getDiscountAmount(screening: Screening): Money {
+import { DiscountPolicy } from "./DiscountPolicy";
+export class NoneDiscountPolicy implements DiscountPolicy {
+	constructor() {}
+	public calculateDiscountAmount(screening: Screening): Money {
 		return Money.ZERO;
 	}
 }

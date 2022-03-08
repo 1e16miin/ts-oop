@@ -1,7 +1,8 @@
+import { Duration } from "js-joda";
+
+import { DiscountPolicy } from "./DiscountPolicy";
 import { Money } from "./Money";
 import { Screening } from "./Screening";
-import { Duration, LocalTime } from "js-joda";
-import { DiscountPolicy } from "./DiscountPolicy";
 
 export class Movie {
 	private title: string;
