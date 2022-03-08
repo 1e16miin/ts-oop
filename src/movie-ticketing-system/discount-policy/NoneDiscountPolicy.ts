@@ -1,5 +1,5 @@
-import { Money } from "./Money";
-import { Screening } from "./Screening";
+import { Money } from "../Money";
+import { Screening } from "../Screening";
 import { DiscountPolicy } from "./DiscountPolicy";
 export class NoneDiscountPolicy implements DiscountPolicy {
 	constructor() {}

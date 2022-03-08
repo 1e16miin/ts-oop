@@ -1,4 +1,4 @@
-import { DiscountCondition } from "./DiscountCondition";
+import { DiscountCondition } from "./discount-condition/DiscountCondition";
 import { Screening } from "./Screening";
 export class SequenceCondition implements DiscountCondition {
 	private sequence: number;

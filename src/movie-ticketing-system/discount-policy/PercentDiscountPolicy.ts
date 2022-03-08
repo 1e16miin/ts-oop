@@ -1,7 +1,7 @@
 import { DefaultDiscountPolicy } from "./DefaultDiscountPolicy";
-import { DiscountCondition } from "./DiscountCondition";
-import { Money } from "./Money";
-import { Screening } from "./Screening";
+import { DiscountCondition } from "../discount-condition/DiscountCondition";
+import { Money } from "../Money";
+import { Screening } from "../Screening";
 export class PercentDiscountPolicy extends DefaultDiscountPolicy {
 	private percent: number;
 

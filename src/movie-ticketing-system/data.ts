@@ -3,9 +3,9 @@ import { Duration, DayOfWeek, LocalTime } from "js-joda";
 import { Money } from "./Money";
 import { AmountDiscountPolicy } from "./AmountDiscountPolicy";
 import { SequenceCondition } from "./SequenceCondition";
-import { PeriodCondition } from "./PeriodCondition";
-import { PercentDiscountPolicy } from "./PercentDiscountPolicy";
-import { NoneDiscountPolicy } from "./NoneDiscountPolicy";
+import { PeriodCondition } from "./discount-condition/PeriodCondition";
+import { PercentDiscountPolicy } from "./discount-policy/PercentDiscountPolicy";
+import { NoneDiscountPolicy } from "./discount-policy/NoneDiscountPolicy";
 
 const avatar: Movie = new Movie(
 	"아바타",

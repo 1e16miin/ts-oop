@@ -1,6 +1,6 @@
 import { Duration } from "js-joda";
 
-import { DiscountPolicy } from "./DiscountPolicy";
+import { DiscountPolicy } from "./discount-policy/DiscountPolicy";
 import { Money } from "./Money";
 import { Screening } from "./Screening";
 

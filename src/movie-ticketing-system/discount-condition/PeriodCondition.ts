@@ -1,6 +1,6 @@
 import { DayOfWeek, LocalTime } from "js-joda";
 import { DiscountCondition } from "./DiscountCondition";
-import { Screening } from "./Screening";
+import { Screening } from "../Screening";
 export class PeriodCondition implements DiscountCondition {
 	private dayOfWeek: DayOfWeek;
 	private startTime: LocalTime;
