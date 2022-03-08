@@ -5,6 +5,7 @@ import { AmountDiscountPolicy } from "./AmountDiscountPolicy";
 import { SequenceCondition } from "./SequenceCondition";
 import { PeriodCondition } from "./PeriodCondition";
 import { PercentDiscountPolicy } from "./PercentDiscountPolicy";
+import { NoneDiscountPolicy } from "./NoneDiscountPolicy";
 
 const avatar: Movie = new Movie(
 	"아바타",
@@ -47,4 +48,11 @@ const titanic: Movie = new Movie(
 	)
 );
 
-export { avatar, titanic };
+const starWars = new Movie(
+	"스타워즈",
+	Duration.ofMinutes(210),
+	Money.wons(10000),
+	new NoneDiscountPolicy()
+);
+
+export { avatar, titanic, starWars };
