@@ -1,6 +1,6 @@
 import { Money } from "./Money";
 import { Screening } from "./Screening";
-import { Duration, LocalDate } from "js-joda";
+import { Duration, LocalTime } from "js-joda";
 import { DiscountPolicy } from "./DiscountPolicy";
 
 export class Movie {
@@ -12,10 +12,12 @@ export class Movie {
 	constructor(
 		title: string,
 		runningTime: Duration,
+		fee: Money,
 		discountPolicy: DiscountPolicy
 	) {
 		this.title = title;
 		this.runningTime = runningTime;
+		this.fee = fee;
 		this.discountPolicy = discountPolicy;
 	}
 
@@ -24,6 +26,9 @@ export class Movie {
 	}
 
 	public calculateMovieFee(screening: Screening): Money {
+		if (this.discountPolicy === null) {
+			return this.fee;
+		}
 		return this.fee.minus(
 			this.discountPolicy.calculateDiscountAmount(screening)
 		);
