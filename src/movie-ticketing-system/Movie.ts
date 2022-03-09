@@ -31,4 +31,8 @@ export class Movie {
 			this.discountPolicy.calculateDiscountAmount(screening)
 		);
 	}
+
+	public changeDiscountPolicy(discountPolicy: DiscountPolicy): void{
+		this.discountPolicy = discountPolicy
+	}
 }

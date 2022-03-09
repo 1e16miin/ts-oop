@@ -28,6 +28,21 @@ const avatar: Movie = new Movie(
 	)
 );
 
+avatar.changeDiscountPolicy(new PercentDiscountPolicy(
+	0.1,
+	new PeriodCondition(
+		DayOfWeek.TUESDAY,
+		LocalTime.of(14, 0),
+		LocalTime.of(15, 59)
+	),
+	new SequenceCondition(2),
+	new PeriodCondition(
+		DayOfWeek.THURSDAY,
+		LocalTime.of(10, 0),
+		LocalTime.of(13, 59)
+	)
+))
+
 const titanic: Movie = new Movie(
 	"타이타닉",
 	Duration.ofMinutes(189),
